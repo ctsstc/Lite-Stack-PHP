@@ -1,0 +1,13 @@
+<div class="container">
+{% if flash['error'] %}
+	<div class="alert alert-danger">
+		{{ flash['error']|raw }}
+	</div>
+{% endif %}
+
+{% if flash['success'] %}
+	<div class="alert alert-success">
+		{{ flash['success']|raw }}
+	</div>
+{% endif %}
+</div>

@@ -1,0 +1,62 @@
+{% extends 'extendibles/base.html.twig' %}
+
+{% block page_title %}{% endblock %}
+
+{% block page_description %}PHP Lite Stack is a collection of public libraries that work together in harmony.
+PHP Lite Stack is provided as a broiler plate to quickly drop into an Apache or Nginx environment.
+PHP Lite Stack has been used on small and large projects -- even if libraries say they should only  be small.
+PHP Lite Stack provides an MVC - Model View Controller environment that anyone can easily become accustomed to,
+which will save your time and headaches with eased development, and organized code and structure.{% endblock %}
+
+{% block extra_head %}{% endblock %}
+
+{% set css_files = ['/css/index.css'] %}
+
+{% set js_files = [] %}
+
+{% block rawJS %}{% endblock %}
+
+{% block content %}
+
+	<div class="container">
+
+		{% for page in pages %}
+			{% if page.visible == 1 %}
+				<a class="page" href='{{ page.url }}'>{{ page.name }}</a>
+			{% endif %}
+		{% endfor %}
+
+		<div class="row" style="padding-top: 40px;">
+
+			<div id="about" class="col-md-4">
+				<h4>About</h4>
+				<p></p>
+			</div>
+
+			<div id="download" class="col-md-4">
+				<h4>Download</h4>
+				<p></p>
+			</div>
+
+			<div id="frameworks" class="col-md-4">
+				<h4>Frameworks</h4>
+				<ul>
+					<li>Idiorm v1.5.1</li>
+					<li>Paris v1.5.3</li>
+					<li>Slim v2.4.2</li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<p></p>
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block afterFooter %}
+
+{% endblock %}

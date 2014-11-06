@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="description" content="{% block page_description %}{% endblock %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/images/icons/png/favico.png">
+{% block extra_head %}{% endblock %}
+
+	<!-- TITLE -->{% set pageTitleBlock = block('page_title') %}
+	<title>{% block page_title %}{% endblock %}{% if pageTitleBlock is not empty %} | {% endif %}{{ siteName }}</title>
+
+	<!-- CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Armata|Russo+One' rel='stylesheet' type='text/css'>
+	<link href="/css/libs/bootstrap-v3.1.0.min.css" rel="stylesheet">
+{% for css in css_files %}
+	<link href="{{ css }}" rel="stylesheet">
+{% endfor %}
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+	<script src="js/libs/html5shiv.js"></script>
+	<script src="js/libs/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="/images/sprites/favico1.png" type="image/png">
+</head>
+
+<body>
+
+{% block beforeMainContainer %}{% endblock %}
+
+<div id="mainContainer">
+
+	{% block beforeHeader %}{% endblock %}
+	{% if not noHeader %}
+		{% include 'parts/header.html.twig' %}
+	{% endif %}
+	{% block afterHeader %}{% endblock %}
+
+	<div id="main">
+		{% include 'parts/flashMessage.html.twig' %}
+		{% block content %}{% endblock %}
+	</div>
+
+	{% block beforeFooter %}{% endblock %}
+	{% if not noFooter %}
+		{% set bootstrapVersion = '3.1.0' %}
+		{% include 'parts/footer.html.twig' %}
+	{% endif %}
+	{% block afterFooter %}{% endblock %}
+</div>
+
+{% block afterMainContainer %}{% endblock %}
+
+<!-- JAVASCRIPT -->
+<script src="/js/libs/jquery-1.11.1.min.js"></script>
+{% for js in js_files %}
+	<script src="{{ js }}"></script>
+{% endfor %}
+<script>
+	{% block rawJS %}{% endblock %}
+</script>
+
+<!-- Bootstrap -->
+<script src="/js/libs/bootstrap-v3.1.0.min.js"></script>
+
+{% include 'parts/googleAnalytics.html.twig' %}
+
+</body>
+</html>

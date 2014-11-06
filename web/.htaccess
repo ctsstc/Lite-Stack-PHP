@@ -1,0 +1,18 @@
+RewriteEngine On
+
+# Some hosts may require you to use the `RewriteBase` directive.
+# If you need to use the `RewriteBase` directive, it should be the
+# absolute physical path to the directory that contains this htaccess file.
+#
+# RewriteBase /
+
+# Do not redirect these, so they can have direct access ie: site.com/assets/ site.com/blog/
+# RewriteRule ^(assets|blog|faq)/ - [L]
+RewriteRule robots.txt - [L]
+
+# Forward requests for assets like css, js, etc to the assets/ directory
+RewriteCond %{REQUEST_URI} (css|images|img|js|svg|fonts)/
+RewriteRule ^(.*)$ /assets/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

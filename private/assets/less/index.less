@@ -1,0 +1,74 @@
+@import "base.less";
+
+.inputError {
+
+}
+
+#userAction {
+	margin-top: 20px;
+	select {
+		cursor: pointer;
+	}
+	h3:first-of-type {
+		margin-bottom: 10px;
+	}
+	ul.userNav {
+		list-style: none;
+		a {
+			color: @blue;
+			font-size: 29px;
+			&:hover {
+				color: lighten(@blue, 20%);
+			}
+			span {
+				color: @white;
+				margin-right: 10px;
+			}
+		}
+	}
+	#actions {
+		a {
+			width: 100%;
+		}
+	}
+	#accordion {
+		.panel {
+			background-color: transparent;
+			.panel-heading {
+				cursor: pointer;
+				color: @white;
+				background-color: transparent;
+				padding: 0;
+				.panel-title {
+					font-weight: normal;
+					a {
+						display: block;
+						padding: 10px 15px;
+						.caret {
+							border-bottom-color: @white;
+							border-top-color: @white;
+						}
+						&:hover .caret {
+							border-bottom-color: @turquoise;
+							border-top-color: @turquoise;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#areaContainer {
+	margin-top: 20px;
+	h3 {
+		line-height: 52px;
+	}
+}
+
+#nearByMap {
+	width: 100%;
+	height: 300px;
+	border-radius: 20px;
+	color: @darkGrey;
+}
