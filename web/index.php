@@ -22,7 +22,7 @@ include_once('../private/includes/helperFunctions.php');
 include_once('../private/includes/idiorm.php');
 include_once('../private/includes/paris.php');
 // Default Connection
-ORM::configure('sqlite:../private/db/phpLiteFramework.sqlite3');
+ORM::configure('sqlite:../private/db/listStackPHP.sqlite3');
 /* // MySQL
 ORM::configure('mysql:host=localhost;dbname=dbNameHere;charset=utf8');
 ORM::configure('username', 'dbUserName');
