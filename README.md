@@ -12,13 +12,13 @@ which will save your time and headaches with eased development, and organized co
 
 ## Frameworks
 
-### [Slim](http://slimframework.com/) - v2.4.2
+### [Slim](http://slimframework.com/) - v2.4.3
 *Controller*
 
 Handles the routing for the site. Allows you to create "Fancy / Virtual URLs" and easy RESTful services.
 > Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs
 
-### [Bootstrap](http://getbootstrap.com/) - v3.1.0
+### [Bootstrap](http://getbootstrap.com/) - v3.3.1
 *Frosting*
 
 Used to provide a mobile first approach as well as standardized basic visual styles.
@@ -43,7 +43,7 @@ without worrying about syntax differences.
 > Paris is an Active Record implementation based on Idiorm.
 > > Database agnostic. Currently supports SQLite, MySQL, Firebird and PostgreSQL. May support others, please give it a try!
 
-### [Twig](http://twig.sensiolabs.org/) - v1.15.1
+### [Twig](http://twig.sensiolabs.org/) - v1.16.2
 *View*
 
 Handles the templating for the site.
