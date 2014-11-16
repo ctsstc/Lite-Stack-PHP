@@ -33,7 +33,7 @@ Compiles less files via PHP.  Custom caching was added to prevent rebuilding the
 Used to give semantic meaning to plain CSS as well as better structure and
 create more efficient & manageable code.
 
-### [Idiorm & Paris](http://j4mie.github.io/idiormandparis/) - v1.5.1 & v1.5.3
+### [Idiorm & Paris](http://j4mie.github.io/idiormandparis/) - v1.5.1 & v1.5.4
 *Model*
 
 Used as an ORM for database communication.  Switch between different database types
