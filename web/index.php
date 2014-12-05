@@ -57,6 +57,7 @@ $app->configureMode('development', function () use ($app)
 
 // Set Global View Data
 $view = $app->view();
+$app->view->getInstance()->addFilter(new Twig_SimpleFilter('debug', 'debug'));
 $view->setData(array(
 	'loggedIn'=> UserSession::isLoggedIn(),
 	'siteName'=> 'Lite Stack PHP'
