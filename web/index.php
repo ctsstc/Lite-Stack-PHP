@@ -29,13 +29,8 @@ ORM::configure('username', 'dbUserName');
 ORM::configure('password', 'dbPassword');
 */
 
-/* Model Paths
-	Rather than including them globally I'm trying
-	to only load them when needed */
-define('MODEL_PAGE', '../private/models/Page.php');
-
-// Load any Globals
-//include_once(MODEL_PAGE);
+// Auto Loaders
+include_once '../private/autoloaders/autoloader main.php';
 
 // LESS Compiler
 include_once("../private/includes/less.inc.php");
@@ -86,8 +81,6 @@ $authCheck = function() use ($app)
 // Homepage
 $app->get('/', function() use($app)
 {
-	include_once(MODEL_PAGE);
-
 	doLessFileCached('index');
 	$app->render('index.html.twig', array(
 		'pages'=>Page::getPages()->find_array()
