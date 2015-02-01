@@ -39,7 +39,9 @@ include_once("../private/includes/less.inc.php");
 $app = new \Slim\Slim(array(
 	'mode' => 'development',
 	'view' => new \Slim\Views\Twig(),
-	'templates.path' => '../private/templates/'
+	'templates.path' => '../private/templates/',
+	/*'environment.settings'=> array(
+		'route.base'=>'/subDirectory/directory/')*/
 ));
 
 $app->configureMode('development', function () use ($app)
