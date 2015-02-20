@@ -35,13 +35,17 @@ include_once '../private/autoloaders/autoloader main.php';
 // LESS Compiler
 include_once("../private/includes/less.inc.php");
 
+/* Use for when in a sub-folder
+define('BASE_PATH', '/subDirectory/directory/');*/
+
 // Start Slim's Instance & Twig View
 $app = new \Slim\Slim(array(
 	'mode' => 'development',
 	'view' => new \Slim\Views\Twig(),
 	'templates.path' => '../private/templates/',
-	/*'environment.settings'=> array(
-		'route.base'=>'/subDirectory/directory/')*/
+	/* Use for when in a sub-folder
+	 * 'environment.settings'=> array(
+		'route.base'=>BASE_PATH)*/
 ));
 
 $app->configureMode('development', function () use ($app)
@@ -62,7 +66,9 @@ $view = $app->view();
 $app->view->getInstance()->addFilter(new Twig_SimpleFilter('debug', 'debug'));
 $view->setData(array(
 	'loggedIn'=> UserSession::isLoggedIn(),
-	'siteName'=> 'Lite Stack PHP'
+	'siteName'=> 'Lite Stack PHP',
+	/* Use for when in a sub-folder
+	'basePath'=> BASE_PATH */
 ));
 
 //endregion </Init>
