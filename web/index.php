@@ -5,6 +5,7 @@ ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
 //region 	<Init>
+session_cache_limiter(false);
 session_start();
 header('Content-type: text/html; charset=utf-8');
 
