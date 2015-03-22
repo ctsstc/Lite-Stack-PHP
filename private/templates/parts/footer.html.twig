@@ -7,15 +7,17 @@
 			<div class="col-md-4"><h6><a href="/sitemap/">Site Map</a></h6></div>
 		</div>
 		<div class="row">
-			&copy;
-			{% set thisYear = "now"|date("Y") %}
-			{% set startYear = 2014 %}
-			{% if thisYear == startYear %}
-				{{ startYear }}
-			{% else %}
-				{{ startYear }}-{{ thisYear }}
-			{% endif %}
-			{{ siteName }}
+			<p>
+				&copy;
+				{% set thisYear = "now"|date("Y") %}
+				{% set startYear = 2014 %}
+				{% if thisYear == startYear %}
+					{{ startYear }}
+				{% else %}
+					{{ startYear }}-{{ thisYear }}
+				{% endif %}
+				{{ siteName }}
+			</p>
 		</div>
 	</div>
 </div>
