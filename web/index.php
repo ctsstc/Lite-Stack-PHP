@@ -68,6 +68,7 @@ $app->view->getInstance()->addFilter(new Twig_SimpleFilter('debug', 'debug'));
 $view->setData(array(
 	'loggedIn'=> UserSession::isLoggedIn(),
 	'siteName'=> 'Lite Stack PHP',
+	'siteShort'=> 'LS', // null for default - grabs first two characters of the siteName
 	/* Use for when in a sub-folder
 	'basePath'=> BASE_PATH */
 ));

@@ -1,8 +1,8 @@
 {% block header %}
 	<div id="header" class="container">
 		<a href="/">
-			<h1 id="logoTag">LS</h1>
-			<h2>Lite Stack PHP</h2>
+			<h1 id="logoTag">{{ siteShort|default(siteName|slice(0,2)) }}</h1>
+			<h2>{{ siteName }}</h2>
 		</a>
 		<hr>
 	</div>
