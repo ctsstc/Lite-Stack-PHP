@@ -25,6 +25,16 @@ Used to provide a mobile first approach as well as standardized basic visual sty
 > Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
 > Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
 
+### [jQuery](https://jquery.com/) - v1.11.2
+*Frosting*
+
+Used to provide a browser unified JavaScript environment that builds in best practices and allows for 
+easy DOM selection and navigation.
+> jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal 
+and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a 
+multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that 
+millions of people write JavaScript.
+
 ### [LESS PHP](http://leafo.net/lessphp/) - Custom Modified v0.4.0
 *Frosting*
 
