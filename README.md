@@ -12,7 +12,7 @@ which will save your time and headaches with eased development, and organized co
 
 ## Frameworks
 
-### [Slim](http://slimframework.com/) - v2.4.3
+### [Slim](http://slimframework.com/) - v2.6.2
 *Controller*
 
 Handles the routing for the site. Allows you to create "Fancy / Virtual URLs" and easy RESTful services.
