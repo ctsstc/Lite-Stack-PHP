@@ -53,7 +53,7 @@ without worrying about syntax differences.
 > Paris is an Active Record implementation based on Idiorm.
 > > Database agnostic. Currently supports SQLite, MySQL, Firebird and PostgreSQL. May support others, please give it a try!
 
-### [Twig](http://twig.sensiolabs.org/) - v1.16.2
+### [Twig](http://twig.sensiolabs.org/) - v1.18.0
 *View*
 
 Handles the templating for the site.
