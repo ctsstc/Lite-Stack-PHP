@@ -18,7 +18,7 @@ which will save your time and headaches with eased development, and organized co
 Handles the routing for the site. Allows you to create "Fancy / Virtual URLs" and easy RESTful services.
 > Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs
 
-### [Bootstrap](http://getbootstrap.com/) - v3.3.1
+### [Bootstrap](http://getbootstrap.com/) - v3.3.4
 *Frosting*
 
 Used to provide a mobile first approach as well as standardized basic visual styles.

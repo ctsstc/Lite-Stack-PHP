@@ -14,7 +14,7 @@
 
 	<!-- CSS -->
 	<link href='http://fonts.googleapis.com/css?family=Armata|Russo+One' rel='stylesheet' type='text/css'>
-	<link href="/css/libs/bootstrap-v3.1.0.min.css" rel="stylesheet">
+	<link href="/css/libs/bootstrap-v3.3.4.min.css" rel="stylesheet">
 {% for css in css_files %}
 	<link href="{{ css }}" rel="stylesheet">
 {% endfor %}
@@ -48,7 +48,6 @@
 
 	{% block beforeFooter %}{% endblock %}
 	{% if not noFooter %}
-		{% set bootstrapVersion = '3.1.0' %}
 		{% include 'parts/footer.html.twig' %}
 	{% endif %}
 	{% block afterFooter %}{% endblock %}
@@ -66,7 +65,7 @@
 </script>
 
 <!-- Bootstrap -->
-<script src="/js/libs/bootstrap-v3.1.0.min.js"></script>
+<script src="/js/libs/bootstrap-v3.3.4.min.js"></script>
 
 {% include 'parts/googleAnalytics.html.twig' %}
 
