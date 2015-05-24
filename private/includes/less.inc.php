@@ -89,6 +89,7 @@ class lessc {
 
 		$inputFile = "../private/assets/less/$inputFile";
 		$outputFile = "assets/css/$outputFile";
+		$outputPathInfo = pathinfo($outputFile);
 
 		/*
 		echo "<br><br>";
@@ -111,6 +112,9 @@ class lessc {
 
 		// CTS - added !file_exists($outputFile) - in case the css file does not exist - in the case that there was an error writing the file the first time
 		if (!is_array($cache) || $newCache["updated"] > $cache["updated"] || !file_exists($outputFile) ) {
+
+			if (!is_dir($outputPathInfo['dirname']))
+				mkdir($outputPathInfo['dirname']);
 
 			file_put_contents($cacheFile, serialize($newCache));
 			file_put_contents($outputFile, $newCache['compiled']);
